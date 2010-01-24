@@ -1,0 +1,29 @@
+8
+
+dir
+28
+svn+ssh://192.168.11.6/home/kaz/repos/FeedAggregator/trunk/bin
+svn+ssh://192.168.11.6/home/kaz/repos
+
+
+
+2008-06-14T15:52:12.349709Z
+28
+kaz
+
+
+svn:special svn:externals svn:needs-lock
+
+aggregation.pl
+file
+
+
+
+
+2008-06-14T15:45:33.000000Z
+1d401710c219bb92429f3d673a807280
+2008-06-14T15:52:12.349709Z
+28
+kaz
+has-props
+

@@ -1,0 +1,20 @@
+Run script/feedaggregator_server.pl to test the application.
+
+bin/aggregation.pl mysqlID/Password LivedoorreaderID/Password
+bin/bloglines-aggregation.pl mysqlID/Password BloglinesID/Password
+lib/FeedAggregator/Controller/Root.pm BasicAuthID/Password
+lib/FeedAggregator/Model/FADB.pm mysqlID/Password
+lib/FeedAggregator.pm session dir
+sql/create.sql user password
+
+
+# mod_perl
+<Perl>
+use lib "/home/kaz/apache2/myapp/FeedAggregator/lib";
+use FeedAggregator;
+</Perl>
+
+<Location /feeds>
+  SetHandler perl-script
+  PerlResponseHandler FeedAggregator
+</Location>

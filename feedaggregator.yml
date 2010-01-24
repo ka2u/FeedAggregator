@@ -1,0 +1,8 @@
+---
+name: FeedAggregator
+authentication:
+    dbic:
+        user_class: FADB::User
+        user_field: user_id
+        password_field: passwd
+

@@ -1,0 +1,28 @@
+[% META title = 'FeedAggregator' %]
+
+<p>FeedAggregator</p>
+
+<form method="post" action="/feeds/auth/login">
+<table>
+    <tr>
+        <td>Sign in with you</td>
+    </tr>
+    <tr>
+        <td>account:</td><td><input type="text" name="user_id"></td>
+    </tr>
+    <tr>
+        <td>password:</td><td><input type="password" name="passwd"></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="mobile"></td><td>mobile</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="remember"></td><td>Remember me on the computer.</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td><td><input type="submit" name="submit" value="Sign in"></td>
+    </tr>
+</table>
+</form>
+
+<p>Don't have a Account? <a href="user/input">Create an account now</a></p>

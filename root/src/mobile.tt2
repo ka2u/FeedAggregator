@@ -1,0 +1,17 @@
+[% META title = 'Feeds' %]
+
+<table>
+[% FOREACH feed = feeds %]
+<tr>
+    <td nowrap>[% feed.pubdate %]</td><td nowrap>[% feed.feedtitle %]</td><td nowrap><a href="[% feed.link %]" target="_blank">[% feed.title %]</a></td>
+</tr>
+[% END %]
+</table>
+
+[% FOREACH page = [1 .. 30] %]
+    [% IF pager.current_page == page %]
+        [[% page %]]
+    [% ELSE %]
+        <a href="[% page_link %]?page=[% page %]">[% page %]</a>
+    [% END %]
+[% END %]

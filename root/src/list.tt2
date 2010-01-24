@@ -1,0 +1,45 @@
+[% META title = 'Feeds' %]
+
+<a href="aggregation">aggregation!!</a>
+
+<form action="content" method="post">
+    <select name="timestamp">
+        [% FOREACH date = dates %]
+            <option value="[% date.timestamp %]" [% IF Catalyst.session.timestamp == date.timestamp %]selected[% END %]>[% date.timestamp %]</option>
+        [% END %]
+    </select>
+    <input type="submit" value="change">
+</form>
+<form action="folder" method="post">
+    <select name="folder">
+        [% FOREACH folder = folders %]
+            <option value="[% folder.foldertitle %]" [% IF Catalyst.session.foldertitle == folder.foldertitle %]selected[% END %]>[% folder.foldertitle %]</option>
+        [% END %]
+    </select>
+    <input type="submit" value="change">
+</form>
+<form action="feed" method="post">
+    <select name="feedtitle">
+        [% FOREACH feedtitle = feedtitles %]
+            <option value="[% feedtitle.feedtitle %]" [% IF Catalyst.session.feedtitle == feedtitle.feedtitle %]selected[% END %]>[% feedtitle.feedtitle %]</option>
+        [% END %]
+    </select>
+    <input type="submit" value="change">
+</form>
+
+
+<table>
+[% FOREACH feed = feeds %]
+<tr>
+    <td nowrap>[% feed.pubdate %]</td><td nowrap>[% feed.feedtitle %]</td><td nowrap><a href="[% feed.link %]" target="_blank">[% feed.title %]</a></td>
+</tr>
+[% END %]
+</table>
+
+[% FOREACH page = [1 .. pager.last_page] %]
+    [% IF pager.current_page == page %]
+        [[% page %]]
+    [% ELSE %]
+        <a href="[% page_link %]?page=[% page %]">[% page %]</a>
+    [% END %]
+[% END %]

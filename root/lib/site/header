@@ -1,0 +1,4 @@
+<!-- BEGIN site/header -->
+<h1 class="title">[% template.title or site.title %]</h1>
+<p><a href="/feeds/auth/logout">Sign out</a></p>
+<!-- END site/header -->
